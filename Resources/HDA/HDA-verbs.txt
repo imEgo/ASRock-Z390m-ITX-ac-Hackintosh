@@ -1,0 +1,42 @@
+
+Verbs from File: "codec#0.txt"
+
+Codec: Realtek ALC892   Address: 0   DevID: 283904146 (0x10EC0892)
+
+NID       PinDefault     Device             Connector           Port            Location                    Color     G  P  EAPD  Original Verbs
+------------------------------------------------------------------------------------------------------------------------------------------------
+17 (0x11) 40000000   Out Line Out           Unknown             No Connection   External N/A                Unknown   0  0  -     01171C00 01171D00 01171E00 01171F40
+18 (0x12) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01271CF0 01271D11 01271E11 01271F41
+20 (0x14) 01014010   Out Line Out           1/8" Stereo/Mono    Jack            External Rear               Green     1  0  0x2   01471C10 01471D40 01471E01 01471F01 01470C02
+21 (0x15) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01571CF0 01571D11 01571E11 01571F41
+22 (0x16) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01671CF0 01671D11 01671E11 01671F41
+23 (0x17) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01771CF0 01771D11 01771E11 01771F41
+24 (0x18) 01A19030   In  Mic In             1/8" Stereo/Mono    Jack            External Rear               Pink      3  0  -     01871C30 01871D90 01871EA1 01871F01
+25 (0x19) 02A19040   In  Mic In             1/8" Stereo/Mono    Jack            External Front              Pink      4  0  -     01971C40 01971D90 01971EA1 01971F02
+26 (0x1A) 0181303F   In  Line In            1/8" Stereo/Mono    Jack            External Rear               Blue      3  15 -     01A71C3F 01A71D30 01A71E81 01A71F01
+27 (0x1B) 02214020   Out HP Out             1/8" Stereo/Mono    Jack            External Front              Green     2  0  0x2   01B71C20 01B71D40 01B71E21 01B71F02 01B70C02
+28 (0x1C) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01C71CF0 01C71D11 01C71E11 01C71F41
+29 (0x1D) 4024C601   Out HP Out             RCA                 No Connection   External N/A                Unknown   0  1  -     01D71C01 01D71DC6 01D71E24 01D71F40
+30 (0x1E) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01E71CF0 01E71D11 01E71E11 01E71F41
+31 (0x1F) 411111F0   Out Speaker            1/8" Stereo/Mono    No Connection   External Rear               Black     15 0  -     01F71CF0 01F71D11 01F71E11 01F71F41
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+NID       PinDefault     Device             Connector           Port            Location                    Color     G  P  EAPD  Modified Verbs
+------------------------------------------------------------------------------------------------------------------------------------------------
+17 (0x11) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01171CF0 01171D00 01171E00 01171F40
+18 (0x12) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01271CF0 01271D00 01271E00 01271F40
+20 (0x14) 90114010   Out Speaker            1/8" Stereo/Mono    Fixed           Internal N/A                Green     1  0  0x2   01471C10 01471D40 01471E11 01471F90 01470C02
+21 (0x15) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01571CF0 01571D00 01571E00 01571F40
+22 (0x16) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01671CF0 01671D00 01671E00 01671F40
+23 (0x17) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01771CF0 01771D00 01771E00 01771F40
+24 (0x18) 90A09030   In  Mic In             Unknown             Fixed           Internal N/A                Pink      3  0  -     01871C30 01871D90 01871EA0 01871F90
+25 (0x19) 02819040   In  Line In            1/8" Stereo/Mono    Jack            External Front              Pink      4  0  -     01971C40 01971D90 01971E81 01971F02
+26 (0x1A) 01813050   In  Line In            1/8" Stereo/Mono    Jack            External Rear               Blue      5  0  -     01A71C50 01A71D30 01A71E81 01A71F01
+27 (0x1B) 02214020   Out HP Out             1/8" Stereo/Mono    Jack            External Front              Green     2  0  0x2   01B71C20 01B71D40 01B71E21 01B71F02 01B70C02
+28 (0x1C) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01C71CF0 01C71D00 01C71E00 01C71F40
+29 (0x1D) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01D71CF0 01D71D00 01D71E00 01D71F40
+30 (0x1E) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01E71CF0 01E71D00 01E71E00 01E71F40
+31 (0x1F) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01F71CF0 01F71D00 01F71E00 01F71F40
+------------------------------------------------------------------------------------------------------------------------------------------------
+
