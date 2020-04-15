@@ -1,0 +1,3 @@
+- PinConfigurator 2.2.7
+  - https://github.com/headkaze/PinConfigurator
+  - HDA Audio Codec verb configuration application.
