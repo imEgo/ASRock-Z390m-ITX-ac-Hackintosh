@@ -37,10 +37,14 @@
 - iMessage/FaceTime（修改三码）
 
 ## 工作异常
-- 多出一个S/PDIF音频输出，需要重新定制声卡
+- ~~多出一个S/PDIF音频输出，需要重新定制声卡~~
 
 ## TODO
-- 重新定制声卡映射，解决多出一个S/PDIF音频输出的问题
+- ~~重新定制声卡映射，解决多出一个S/PDIF音频输出的问题~~
 
 ## 使用说明
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
+
+## 更新
+- 2020/04/15
+  - 定制了声卡接口，屏蔽全部无用接口，IO面板Line Out/Mic In与前置面板HP Out/Mic In互为一组，前置面板接口插入时自动切换
