@@ -26,7 +26,7 @@ NID       PinDefault     Device             Connector           Port            
 ------------------------------------------------------------------------------------------------------------------------------------------------
 17 (0x11) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01171CF0 01171D00 01171E00 01171F40
 18 (0x12) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01271CF0 01271D00 01271E00 01271F40
-20 (0x14) 90114010   Out Speaker            1/8" Stereo/Mono    Fixed           Internal N/A                Green     1  0  0x2   01471C10 01471D40 01471E11 01471F90 01470C02
+20 (0x14) 90104010   Out Speaker            Unknown             Fixed           Internal N/A                Green     1  0  0x2   01471C10 01471D40 01471E10 01471F90 01470C02
 21 (0x15) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01571CF0 01571D00 01571E00 01571F40
 22 (0x16) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01671CF0 01671D00 01671E00 01671F40
 23 (0x17) 400000F0   Out Line Out           Unknown             No Connection   External N/A                Unknown   15 0  -     01771CF0 01771D00 01771E00 01771F40
