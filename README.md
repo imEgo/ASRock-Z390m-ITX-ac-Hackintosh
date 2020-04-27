@@ -22,7 +22,7 @@
   - Secure Boot -> Disabled
   - CSM -> Disabled
 - macOS 10.15.4 19E287
-- Clover 5108
+- Clover r5114
 
 ## 工作正常
 - Intel UHD Graphics 630（Clover注入 - 主板DisplayPort + 2 * HDMI均正常输出，WhateverGreen - Apple GuC firmware）
@@ -48,6 +48,10 @@
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
 
 ## 更新
+- 2020/04/27
+  - Clover升级至r5114
+  - 隐藏Clover启动时的Preboot及Recovery选项
+  - 添加CPUFriend及i9-9900es的配置
 - 2020/04/18
   - BIOS升级至4.30
   - 添加Clover参数AFGLowPowerState/ResetHDA，解决睡眠关机时POP音和与Windows双系统的相互影响
