@@ -288,6 +288,11 @@
 	</dict>
 	<key>GUI</key>
 	<dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+			<string>Recovery</string>
+		</array>
 		<key>Scan</key>
 		<dict>
 			<key>Legacy</key>
