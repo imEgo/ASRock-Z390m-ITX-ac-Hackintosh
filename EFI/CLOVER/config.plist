@@ -71,13 +71,13 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change PEGP to GFX0</string>
+					<string>change PEGP to EGP0</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>UEVHUA==</data>
 					<key>Replace</key>
-					<data>R0ZYMA==</data>
+					<data>RUdQMA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -112,7 +112,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=8 igfxfw=2 agdpmod=pikera brcmfx-driver=1 brcmfx-country=#a</string>
+		<string>darkwake=8 igfxfw=2 agdpmod=pikera shikigva=80 brcmfx-driver=1 brcmfx-country=#a</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Timeout</key>
