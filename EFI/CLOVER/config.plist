@@ -124,6 +124,8 @@
 	<dict>
 		<key>HWPEnable</key>
 		<false/>
+		<key>Type</key>
+		<string>0x1005</string>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
