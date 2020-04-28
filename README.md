@@ -48,6 +48,11 @@
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
 
 ## 更新
+- 2020/04/28
+  - 完善FileVault支持（如果开启的话，修改Clover的隐藏启动项，使用Preboot启动）
+  - 修复启动时间过长问题（修改核显ID屏蔽输出接口）
+  - 修复AppleTV+的DRM视频播放问题
+  - 修改CPU显示类型，修改前关于里显示为i7，改为i9
 - 2020/04/27
   - Clover升级至r5114
   - 隐藏Clover启动时的Preboot及Recovery选项
@@ -55,7 +60,7 @@
 - 2020/04/18
   - BIOS升级至4.30
   - 添加Clover参数AFGLowPowerState/ResetHDA，解决睡眠关机时POP音和与Windows双系统的相互影响
-  - 添加XFX Radeon RX5700 XT THICC II Ultra 8G，伪装为Radeon Pro W5700X（显卡驱动后的启动变长，原因未知待优化）
+  - 添加XFX Radeon RX5700 XT THICC II Ultra 8G，伪装为Radeon Pro W5700X~~（显卡驱动后的启动变长，原因未知待优化）~~
   - macOS升级至10.15.4 19E287
 - 2020/04/15
   - 定制声卡接口，屏蔽全部无用接口，IO面板Line Out/Mic In与前置面板HP Out/Mic In互为一组，前置面板接口插入时自动切换
