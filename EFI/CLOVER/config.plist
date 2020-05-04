@@ -41,16 +41,6 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>Fix AsRock Z390 BIOS DSDT Device(RTC) bug. If BIOS over 1.2</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>oAqTU1RBUwE=</data>
-					<key>Replace</key>
-					<data>oAqRCv8L//8=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change HECI to IMEI</string>
 					<key>Disabled</key>
 					<false/>
@@ -103,6 +93,7 @@
 		</dict>
 		<key>SortedOrder</key>
 		<array>
+			<string>SSDT-AWAC.aml</string>
 			<string>SSDT-PMC.aml</string>
 			<string>SSDT-EC.aml</string>
 			<string>SSDT-USBX.aml</string>
