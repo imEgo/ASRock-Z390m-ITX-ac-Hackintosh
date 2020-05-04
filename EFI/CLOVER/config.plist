@@ -79,6 +79,16 @@
 					<key>Replace</key>
 					<data>SERFRg==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+				</dict>
 			</array>
 		</dict>
 		<key>FixHeaders</key>
@@ -98,6 +108,7 @@
 			<string>SSDT-EC.aml</string>
 			<string>SSDT-USBX.aml</string>
 			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-GPRW.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
