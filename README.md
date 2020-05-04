@@ -25,8 +25,8 @@
 - Clover r5114
 
 ## 工作正常
-- Intel UHD Graphics 630（Clover注入 - 主板DisplayPort + 2 * HDMI均正常输出，WhateverGreen - Apple GuC firmware）
-- XFX Radeon RX5700 XT THICC II Ultra 8G（Clover注入 - 伪装Radeon Pro W5700X，WhateverGreen - agdpmod=pikera）
+- Intel UHD Graphics 630（Clover注入 - 核显硬件加速，WhateverGreen - Apple GuC firmware）
+- XFX Radeon RX5700 XT THICC II Ultra 8G（RadeonBoost - 属性注入，WhateverGreen - agdpmod=pikera）
 - Intel I219V（IntelMausiEthernet）
 - Intel I211AT（SmallTreeIntel82576）
 - 无线（Clover注入 - 禁用ASPM，AirportBrcmFixup - 使用Brcm4360驱动）
@@ -48,6 +48,10 @@
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
 
 ## 更新
+- 2020/05/05
+  - 精简Clover配置
+  - 使用kext注入XFX Radeon RX5700 XT THICC II Ultra定制PP_PhmSoftPowerPlayTable
+  - 升级kexts
 - 2020/04/28
   - 完善FileVault支持（如果开启的话，修改Clover的隐藏启动项，使用Preboot启动）
   - 修复启动时间过长问题（修改核显ID屏蔽输出接口）
@@ -60,7 +64,7 @@
 - 2020/04/18
   - BIOS升级至4.30
   - 添加Clover参数AFGLowPowerState/ResetHDA，解决睡眠关机时POP音和与Windows双系统的相互影响
-  - 添加XFX Radeon RX5700 XT THICC II Ultra 8G，伪装为Radeon Pro W5700X~~（显卡驱动后的启动变长，原因未知待优化）~~
+  - 添加XFX Radeon RX5700 XT THICC II Ultra 8G，伪装为Radeon Pro W5700X ~~（显卡驱动后的启动变长，原因未知待优化）~~
   - macOS升级至10.15.4 19E287
 - 2020/04/15
   - 定制声卡接口，屏蔽全部无用接口，IO面板Line Out/Mic In与前置面板HP Out/Mic In互为一组，前置面板接口插入时自动切换
