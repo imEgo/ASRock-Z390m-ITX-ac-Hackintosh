@@ -79,28 +79,10 @@
 					<key>Replace</key>
 					<data>SERFRg==</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R1BSVwI=</data>
-					<key>Replace</key>
-					<data>WFBSVwI=</data>
-				</dict>
 			</array>
 		</dict>
 		<key>FixHeaders</key>
 		<true/>
-		<key>SSDT</key>
-		<dict>
-			<key>Generate</key>
-			<dict>
-				<key>PluginType</key>
-				<true/>
-			</dict>
-		</dict>
 		<key>SortedOrder</key>
 		<array>
 			<string>SSDT-AWAC.aml</string>
@@ -108,7 +90,7 @@
 			<string>SSDT-EC.aml</string>
 			<string>SSDT-USBX.aml</string>
 			<string>SSDT-UIAC.aml</string>
-			<string>SSDT-GPRW.aml</string>
+			<string>SSDT-PLUG.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -144,17 +126,28 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>pci-aspm-default</key>
-				<integer>0</integer>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,0/0,0</string>
+				<key>device_type</key>
+				<string>Ethernet controller</string>
+				<key>model</key>
+				<string>I211 Gigabit Network Connection</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x6)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,6</string>
+				<key>device_type</key>
+				<string>Ethernet controller</string>
+				<key>model</key>
+				<string>Ethernet Connection (7) I219-V</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AwCYPg==</data>
-				<key>hda-gfx</key>
-				<string>onboard-2</string>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -181,7 +174,7 @@
 			<key>Linux</key>
 			<false/>
 			<key>Tool</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Theme</key>
 		<string>Circla</string>
