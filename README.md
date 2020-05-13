@@ -8,7 +8,7 @@
 - Kingston Fury DDR4 2133MHz 8G * 2 (Overclock 3000MHz)
 - HP EX900 SSD 500GB NVMe PCIe M.2
 - WD Blue HDD 3TB SATA
-- Dell DW1820A(08PKF4) WiFi + BT
+- Dell DW1560 WiFi + BT
 - Intel I219V + I211AT
 - Realtek ALC892
 
@@ -29,7 +29,7 @@
 - XFX Radeon RX5700 XT THICC II Ultra 8G（RadeonBoost - 属性注入，WhateverGreen - agdpmod=pikera）
 - Intel I219V（IntelMausiEthernet）
 - Intel I211AT（SmallTreeIntel82576）
-- 无线（Clover注入 - 禁用ASPM，AirportBrcmFixup - 使用Brcm4360驱动）
+- 无线（AirportBrcmFixup - 修改区域为#a）
 - 蓝牙（BrcmPatchRAM）
 - USB（USBInjectAll，IO面板保留TypeC接口 + 屏蔽2个USB3.0接口，前置面板保留2个USB3.0接口）
 - 声卡（AppleALC - IO面板/前置面板，WhateverGreen - DisplayPort）
@@ -48,6 +48,10 @@
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
 
 ## 更新
+- 2020/05/14
+  - 更换无线网卡为DW1560，DW1820A在系统崩溃后会有时网卡无法驱动（Windows亦如此，需要冷启动才能恢复），不推荐该主板使用DW1820A
+  - PP_PhmSoftPowerPlayTable修改最低风扇转速及起停温度
+  - 修正之前部分SSDT错误参数，添加CPU Plugin-Type改为SSDT注入
 - 2020/05/05
   - 精简Clover配置
   - 使用kext注入XFX Radeon RX5700 XT THICC II Ultra定制PP_PhmSoftPowerPlayTable
