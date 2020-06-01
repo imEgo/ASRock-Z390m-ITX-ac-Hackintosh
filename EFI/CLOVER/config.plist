@@ -8,106 +8,33 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>AddDTGP</key>
-				<false/>
-				<key>AddHDMI</key>
-				<false/>
-				<key>FakeLPC</key>
-				<false/>
-				<key>FixAirport</key>
-				<false/>
-				<key>FixDarwin</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>FixHDA</key>
-				<false/>
-				<key>FixHPET</key>
-				<false/>
-				<key>FixIPIC</key>
-				<false/>
-				<key>FixLAN</key>
-				<false/>
-				<key>FixSATA</key>
-				<false/>
-				<key>FixSBUS</key>
-				<false/>
-				<key>FixShutdown</key>
-				<false/>
-				<key>FixUSB</key>
-				<false/>
+				<key>FixMutex</key>
+				<true/>
 			</dict>
-			<key>Patches</key>
-			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>SEVDSQ==</data>
-					<key>Replace</key>
-					<data>SU1FSQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R0ZYMA==</data>
-					<key>Replace</key>
-					<data>SUdQVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PEGP to EGP0</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>UEVHUA==</data>
-					<key>Replace</key>
-					<data>RUdQMA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>SERBUw==</data>
-					<key>Replace</key>
-					<data>SERFRg==</data>
-				</dict>
-			</array>
 		</dict>
 		<key>FixHeaders</key>
 		<true/>
 		<key>SortedOrder</key>
 		<array>
 			<string>SSDT-AWAC.aml</string>
-			<string>SSDT-PMC.aml</string>
-			<string>SSDT-EC.aml</string>
+			<string>SSDT-DEV.aml</string>
 			<string>SSDT-USBX.aml</string>
 			<string>SSDT-UIAC.aml</string>
-			<string>SSDT-PLUG.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=8 igfxfw=2 agdpmod=pikera shikigva=80 brcmfx-driver=1 brcmfx-country=#a</string>
+		<string>darkwake=8 igfxfw=2 agdpmod=pikera shikigva=80 brcmfx-country=#a</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Timeout</key>
-		<integer>3</integer>
-		<key>XMPDetection</key>
-		<string>Yes</string>
+		<integer>5</integer>
 	</dict>
 	<key>CPU</key>
 	<dict>
 		<key>HWPEnable</key>
-		<false/>
+		<true/>
 		<key>Type</key>
 		<string>0x1005</string>
 		<key>UseARTFrequency</key>
@@ -119,11 +46,11 @@
 		<dict>
 			<key>AFGLowPowerState</key>
 			<false/>
-			<key>Inject</key>
-			<integer>22</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
+		<key>NoDefaultProperties</key>
+		<true/>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
@@ -134,6 +61,11 @@
 				<string>Ethernet controller</string>
 				<key>model</key>
 				<string>I211 Gigabit Network Connection</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>layout-id</key>
+				<data>FgAAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x6)</key>
 			<dict>
@@ -170,8 +102,6 @@
 		<key>Scan</key>
 		<dict>
 			<key>Legacy</key>
-			<false/>
-			<key>Linux</key>
 			<false/>
 			<key>Tool</key>
 			<true/>
