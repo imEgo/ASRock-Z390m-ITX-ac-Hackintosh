@@ -5,8 +5,8 @@
 - ASRock Z390m-ITX/ac
 - Intel UHD Graphics 630
 - XFX Radeon RX5700 XT THICC II Ultra 8G
-- Kingston Fury DDR4 2133MHz 8G * 2 (Overclock 3000MHz)
-- HP EX900 SSD 500GB NVMe PCIe M.2
+- Kingston Fury DDR4 2400MHz 8G * 2 (Overclock 3600MHz)
+- Samsung SM951 SSD 512GB NVMe PCIe M.2
 - WD Blue HDD 3TB SATA
 - Dell DW1560 WiFi + BT
 - Intel I219V + I211AT
@@ -21,7 +21,7 @@
   - XHCI Hand-off -> Enabled
   - Secure Boot -> Disabled
   - CSM -> Disabled
-- macOS 10.15.4 19E287
+- macOS 10.15.5 19F96
 - Clover r5114
 
 ## 工作正常
@@ -48,6 +48,9 @@
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
 
 ## 更新
+- 2020/06/01
+  - macOS升级至10.15.5 19F96
+  - 精简了CLOVER的配置文件，更新了SSDT文件，解决了之前部分SSDT Error，更容易迁移到OpenCore引导（笔记本更换了OpenCore没有什么特别明显的优势，双系统还是CLOVER更友好）
 - 2020/05/14
   - 更换无线网卡为DW1560，DW1820A在系统崩溃后会有时网卡无法驱动（Windows亦如此，需要冷启动才能恢复），不推荐该主板使用DW1820A
   - PP_PhmSoftPowerPlayTable修改最低风扇转速及起停温度
