@@ -5,13 +5,13 @@
  *
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of DSDT.aml, Fri May 15 10:15:36 2020
+ * Disassembly of DSDT.aml, Tue Jun  2 06:45:57 2020
  *
  * Original Table Header:
  *     Signature        "DSDT"
  *     Length           0x0003F490 (259216)
  *     Revision         0x02
- *     Checksum         0x5D
+ *     Checksum         0x8E
  *     OEM ID           "ALASKA"
  *     OEM Table ID     "A M I "
  *     OEM Revision     0x01072009 (17244169)
@@ -338,7 +338,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
     Name (TOPM, 0x00000000)
     Name (ROMS, 0xFFE00000)
     Name (VGAF, One)
-    OperationRegion (GNVS, SystemMemory, 0x76321000, 0x0866)
+    OperationRegion (GNVS, SystemMemory, 0x76320000, 0x0866)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16,
@@ -14011,7 +14011,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
         }
     }
 
-    Name (SNVB, 0x76389000)
+    Name (SNVB, 0x76388000)
     Name (SNVL, 0x0008)
     OperationRegion (SBNV, SystemMemory, SNVB, SNVL)
     Field (SBNV, AnyAcc, Lock, Preserve)
@@ -14413,7 +14413,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
         }
     }
 
-    Name (PNVB, 0x76410B98)
+    Name (PNVB, 0x7640FB98)
     Name (PNVL, 0x028B)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
@@ -58103,6 +58103,18 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                     {
                         Return (Zero)
                     }
+                    Case (0x03)
+                    {
+                        Return (Zero)
+                    }
+                    Case (0x03)
+                    {
+                        Return (Zero)
+                    }
+                    Case (0x30)
+                    {
+                        Return (Zero)
+                    }
                     Case (0xC4)
                     {
                         Return (Zero)
@@ -58124,6 +58136,14 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                         Return (Zero)
                     }
                     Case (0xC8)
+                    {
+                        Return (Zero)
+                    }
+                    Case (0x78)
+                    {
+                        Return (Zero)
+                    }
+                    Case (0xA0)
                     {
                         Return (Zero)
                     }
@@ -58189,6 +58209,15 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                     Case (0x45)
                     {
                     }
+                    Case (0x03)
+                    {
+                    }
+                    Case (0x03)
+                    {
+                    }
+                    Case (0x30)
+                    {
+                    }
                     Case (0xC4)
                     {
                     }
@@ -58205,6 +58234,12 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                     {
                     }
                     Case (0xC8)
+                    {
+                    }
+                    Case (0x78)
+                    {
+                    }
+                    Case (0xA0)
                     {
                     }
                     Case (0xA0)
@@ -58810,4 +58845,3 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
         Notify (\_SB.PWRB, 0x02) // Device Wake
     }
 }
-

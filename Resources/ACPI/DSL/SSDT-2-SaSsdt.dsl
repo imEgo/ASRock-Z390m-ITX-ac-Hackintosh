@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of SSDT-2-SaSsdt.aml, Fri May 15 10:15:36 2020
+ * Disassembly of SSDT-2-SaSsdt.aml, Tue Jun  2 06:45:57 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
  *     Length           0x000031C6 (12742)
  *     Revision         0x02
- *     Checksum         0x0E
+ *     Checksum         0x1F
  *     OEM ID           "SaSsdt"
  *     OEM Table ID     "SaSsdt "
  *     OEM Revision     0x00003000 (12288)
@@ -35,7 +35,7 @@ DefinitionBlock ("", "SSDT", 2, "SaSsdt", "SaSsdt ", 0x00003000)
     External (PNHM, IntObj)
     External (S0ID, UnknownObj)
 
-    OperationRegion (SANV, SystemMemory, 0x76410118, 0x01F4)
+    OperationRegion (SANV, SystemMemory, 0x7640F118, 0x01F4)
     Field (SANV, AnyAcc, Lock, Preserve)
     {
         ASLB,   32, 

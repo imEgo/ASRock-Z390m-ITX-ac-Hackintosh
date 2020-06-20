@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of SSDT-1-CpuSsdt.aml, Fri May 15 10:15:36 2020
+ * Disassembly of SSDT-1-CpuSsdt.aml, Tue Jun  2 06:45:57 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
  *     Length           0x00001B1C (6940)
  *     Revision         0x02
- *     Checksum         0xA9
+ *     Checksum         0x49
  *     OEM ID           "CpuRef"
  *     OEM Table ID     "CpuSsdt"
  *     OEM Revision     0x00003000 (12288)
@@ -44,31 +44,31 @@ DefinitionBlock ("", "SSDT", 2, "CpuRef", "CpuSsdt", 0x00003000)
         Name (SSDT, Package (0x1B)
         {
             "CPU0IST ", 
-            0x75EB9518, 
+            0x75EB8518, 
             0x00000581, 
             "APIST   ", 
-            0x75E78018, 
+            0x75E77018, 
             0x000005FC, 
             "CPU0CST ", 
-            0x75E78698, 
+            0x75E77698, 
             0x00000400, 
             "APCST   ", 
-            0x75E76018, 
+            0x75E75018, 
             0x0000030A, 
             "CPU0HWP ", 
-            0x75E79C18, 
+            0x75E78C18, 
             0x0000011B, 
             "APHWP   ", 
-            0x75E76418, 
+            0x75E75418, 
             0x00000317, 
             "HWPLVT  ", 
-            0x75E79198, 
+            0x75E78198, 
             0x00000724, 
             "CPU0PSD ", 
-            0x75E79018, 
+            0x75E78018, 
             0x000000F4, 
             "APPSD   ", 
-            0x75E77018, 
+            0x75E76018, 
             0x00000AB0
         })
         Name (\PC00, 0x80000000)
@@ -93,7 +93,7 @@ DefinitionBlock ("", "SSDT", 2, "CpuRef", "CpuSsdt", 0x00003000)
     Scope (\_SB)
     {
         Name (CTPC, Zero)
-        OperationRegion (PNVS, SystemMemory, 0x76DB5000, 0x0070)
+        OperationRegion (PNVS, SystemMemory, 0x76DB4000, 0x0070)
         Field (PNVS, AnyAcc, Lock, Preserve)
         {
             PGRV,   8, 
