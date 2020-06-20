@@ -14,14 +14,39 @@
 
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
-  - CFG Lock -> Disabled
-  - VT-d -> Disabled
-  - Share Memory -> 128M
-  - IGPU Multi-Monitor -> Enabled（使用外置显卡时，需要启用核显开启随航）
-  - XHCI Hand-off -> Enabled
-  - Secure Boot -> Disabled
-  - CSM -> Disabled
-- macOS 10.15.5 19F96
+  - OC Tweaker
+    - CPU Configuration
+      - Intel SpeedStep Technology -> Enabled
+      - Intel Turbo Boost Technology -> Enabled
+      - Intel Speed Shift Technology -> Enabled
+  - Advanced
+    - CPU Configuration
+      - CFG Lock -> Disabled
+      - Software Guard Extensions (SGX) -> Disabled
+    - Chipset Configuration
+      - Primary Graphics Adapter -> PCI Express // Required by dGPU
+      - Above 4G Decoding -> Enabled            // Keep Disabled if ES CPU (e.g. QQZ5/QQBZ)
+      - VT-d -> Disabled
+      - Share Memory -> 128M
+      - IGPU Multi-Monitor -> Enabled
+      - PCI Express Native Control -> Enabled   // Optional
+      - PCIE ASPM Support -> Auto               // Optional
+      - PCH PCIE ASPM Support -> Auto           // Optional
+      - DMI ASPM Support -> Enabled             // Optional
+      - PCH DMI ASPM Support -> Enabled         // Optional
+    - Storage Configuration
+      - SATA Mode Selection -> AHCI
+    - USB Configuration
+      - XHCI Hand-off -> Enabled
+    - Trusted Computing
+      - Security Device Support -> Disabled
+  - Security
+    - Secure Boot
+      - Secure Boot -> Disabled
+  - Boot
+    - CSM
+      - CSM -> Disabled
+- macOS 10.15.5 19F101
 - Clover r5114
 
 ## 工作正常
@@ -48,6 +73,15 @@
 - config.plist中三码已删除，需要重新生成（RtVariables - ROM，SMBIOS - BoardSerialNumber/SerialNumber/SmUUID）
 
 ## 更新
+- 2020/06/20
+  - 更新CLOVER至5119版本
+  - 更新Kexts至最新版本
+  - 更换无线网卡为DW1820A（XPS13 9360更新至10.15后DW1820A不能启用ASPM，导致待机功耗飙升，并且也遇到了系统崩溃后网卡不能使用的问题，以目前DW820A的价格还是推荐BCM94360CS2）
+  - 更换CLOVER主题
+  - 移除RadeonBoost.kext（使用方法参考[此说明](Resources/GPU/README.md)）
+  - 更新BIOS选项设置，PCIE ASPM可选择性，开启后节能效果更好
+- 2020/06/02
+  - macOS升级至10.15.5 19F101
 - 2020/06/01
   - macOS升级至10.15.5 19F96
   - 精简了CLOVER的配置文件，更新了SSDT文件，解决了之前部分SSDT Error，更容易迁移到OpenCore引导（笔记本更换了OpenCore没有什么特别明显的优势，双系统还是CLOVER更友好）
