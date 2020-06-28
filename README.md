@@ -93,6 +93,10 @@
   - CSM
     - CSM -> Disabled
 
+### 更换无线网卡
+- 主板自带Intel无线网卡可以直接更换为半高双天线NGFF接口无线网卡，例如DW1560、DW1820A、BCM94360NG等，BCM94360CS2也可以通过转接卡安装但是屏蔽罩上盖需要移除
+- 非DW1820A需删除config.plist中，Devices -> Properties -> PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)的全部注入信息
+
 ### 修改CPU类型
 - 删除config.plist的CPU -> Type字段，重启后如果关于本机不能正常识别CPU类型，则需要注入正确的CPU Type
 - 修改config.plist的CPU -> Type字段，对应列表如下
