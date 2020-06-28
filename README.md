@@ -1,5 +1,7 @@
 # ASRock Z390m-ITX/ac Hackintosh
 
+master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only](https://github.com/imEgo/ASRock-Z390m-ITX-ac-Hackintosh/tree/igpu-only)分支，无核显配置建议更换机型为MacPro7,1自行适配
+
 ## 硬件配置
 - Intel Core i9-9900es(QQZ5) 2.60GHz
 - ASRock Z390m-ITX/ac
@@ -30,6 +32,7 @@
 - 睡眠唤醒
 - AirDrop
 - iMessage/FaceTime
+- AppleTV DRM
 
 
 ## 工作异常
@@ -70,7 +73,7 @@
     - CFG Lock -> Disabled
     - Software Guard Extensions (SGX) -> Disabled
   - Chipset Configuration
-    - Primary Graphics Adapter -> PCI Express // Required by dGPU
+    - Primary Graphics Adapter -> PCI Express
     - Above 4G Decoding -> Enabled            // Keep Disabled if ES CPU (e.g. QQZ5/QQBZ)
     - VT-d -> Disabled
     - Share Memory -> 128M
@@ -114,8 +117,8 @@
   0x1005
   ```
 
-### 定制AMD RX5700XT注入信息
-- [参考文档](Resources/GPU/README.md)
+### 定制显卡
+- AMD RX5700XT注入信息，[参考文档](Resources/GPU/README.md)
 
 
 ## 更新
