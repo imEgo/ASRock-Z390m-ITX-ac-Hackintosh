@@ -1,3 +1,12 @@
+## 2020/06/30
+
+### Added (1 changes)
+- 添加FakeSMC，支持iStat Menus监控AMD Navi10显卡GPU Die温度
+
+### Removed (1 changes)
+- 移除VirtualSMC，与FakeSMC冲突
+
+
 ## 2020/06/20
 
 ### Changed (5 changes)

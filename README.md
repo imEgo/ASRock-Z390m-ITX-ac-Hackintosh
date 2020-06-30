@@ -1,6 +1,6 @@
 # ASRock Z390m-ITX/ac Hackintosh
 
-master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only](https://github.com/imEgo/ASRock-Z390m-ITX-ac-Hackintosh/tree/igpu-only)分支，无核显配置建议更换机型为MacPro7,1自行适配
+使用FakeSMC（相比VirtualSMC），配合iStat Menus可以监控AMD Navi10系列的GPU Die的温度，不过GPU风扇频率等依然不支持
 
 ## 硬件配置
 - Intel Core i9-9900es(QQZ5) 2.60GHz
