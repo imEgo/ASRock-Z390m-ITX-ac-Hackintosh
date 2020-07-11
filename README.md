@@ -10,7 +10,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 - Kingston Fury DDR4 2400MHz 8G * 2 (Overclock 3600MHz)
 - Samsung SM951 SSD 512GB NVMe PCIe M.2
 - WD Blue HDD 3TB SATA
-- Dell DW820A WiFi + BT
+- Dell DW1820A WiFi + BT
 - Intel I219V + I211AT
 - Realtek ALC892
 
