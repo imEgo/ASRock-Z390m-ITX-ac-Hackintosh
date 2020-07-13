@@ -25,7 +25,7 @@
 - Intel UHD Graphics 630
 - XFX Radeon RX5700 XT THICC II Ultra 8G
 - Intel I219V + Intel I211AT
-- Dell DW820A WiFi + BT
+- Dell DW1820A WiFi + BT
 - USB（IO面板保留TypeC接口 + 屏蔽2个USB3.0接口，前置面板保留2个USB3.0接口）
 - 声卡
 - NVRAM
