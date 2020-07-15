@@ -17,7 +17,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
-- macOS 10.15.5 19F101
+- macOS 10.15.6 19G73
 - Clover r5119
 
 
