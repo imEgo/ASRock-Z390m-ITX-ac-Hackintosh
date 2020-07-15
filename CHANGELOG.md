@@ -1,3 +1,9 @@
+## 2020/07/16
+
+### Changed (1 changes)
+- macOS升级至10.15.6 19G73
+
+
 ## 2020/06/30
 
 ### Added (1 changes)
