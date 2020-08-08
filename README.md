@@ -48,7 +48,8 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ### 补全SMBIOS
 
-#### MacSerial (Windows/Linux/macOS)
+#### MacInfoPkg (Windows/Linux/macOS)
+- 下载对应平台的[MacInfoPkg](https://github.com/acidanthera/MacInfoPkg/releases)
 - 执行```macserial -m iMac19,1```，输出的格式为```SerialNumber | BoardSerialNumber```
 - 生成```SystemUUID```，[生成工具](https://www.uuidgenerator.net/version4)
 - 生成```ROM```，可以使用网卡MAC或复制SmUUID前6字节（e.g. ```EFD18768C3AE```），并将6字节HEX Binary转换成Base64编码，[转换工具](https://cryptii.com/pipes/binary-to-base64)
@@ -114,6 +115,14 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ### 定制显卡
 - AMD RX5700XT注入信息，[参考文档](Resources/GPU/README.md)
+
+### OpenCore图形引导与启动声音
+- 下载[OcBinaryData](https://github.com/acidanthera/OcBinaryData/archive/master.zip)
+- 复制```OcBinaryData/Resources```的```Font``` & ```Image```及```Label```目录至```EFI/OC/Resources```
+- 修改config.plist的```Misc``` -> ```Boot``` -> ```PickerMode```为```External```
+- 复制```OcBinaryData/Resources/Audio```的```OCEFIAudio_VoiceOver_Boot.wav```文件至```EFI/OC/Resources/Audio```
+- 修改config.plist的```UEFI``` -> ```Audio``` -> ```PlayChime```为```true```
+- 以上设置均参考[此文档](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
 
 
 ## 更新
