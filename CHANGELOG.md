@@ -1,3 +1,11 @@
+## 2020/08/08
+
+### Changed (2 changes)
+- 替换CLOVER为OpenCore 0.6.0
+- 替换USBInjectAll.kext为USBPorts.kext
+- 更新Kexts至最新版本
+
+
 ## 2020/07/16
 
 ### Changed (1 changes)

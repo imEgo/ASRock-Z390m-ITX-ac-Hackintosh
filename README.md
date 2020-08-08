@@ -2,6 +2,7 @@
 
 master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only](https://github.com/imEgo/ASRock-Z390m-ITX-ac-Hackintosh/tree/igpu-only)分支，无核显配置建议更换机型为MacPro7,1自行适配
 
+
 ## 硬件配置
 - Intel Core i9-9900es(QQZ5) 2.60GHz
 - ASRock Z390m-ITX/ac
@@ -18,7 +19,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
 - macOS 10.15.6 19G73
-- Clover r5119
+- OpenCore 0.6.0
 
 
 ## 工作正常
@@ -47,20 +48,15 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ### 补全SMBIOS
 
-#### Clover Configurator (macOS)
-- 使用Clover Configurator打开config.plist
-- 机型设置 (SMBIOS)
-  - System
-    - 序列号 (Serial Number) -> 生成新的 (Generate New)
-    - SmUUID -> 生成新的 (Generate New)
-- 变量设置 (Rt Variables)
-  - ROM -> 生成 (Generate)
-
 #### MacSerial (Windows/Linux/macOS)
 - 执行```macserial -m iMac19,1```，输出的格式为```SerialNumber | BoardSerialNumber```
-- 生成SmUUID，[生成工具](https://www.uuidgenerator.net/version4)
-- 生成ROM，可以使用网卡MAC或复制SmUUID前6字节（e.g. ```EFD18768C3AE```），并将6字节Binary转换成Base64编码，[转换工具](https://cryptii.com/pipes/binary-to-base64)
-- 编辑config.plist替换RtVariables -> ROM及SMBIOS -> BoardSerialNumber/SerialNumber/SmUUID
+- 生成```SystemUUID```，[生成工具](https://www.uuidgenerator.net/version4)
+- 生成```ROM```，可以使用网卡MAC或复制SmUUID前6字节（e.g. ```EFD18768C3AE```），并将6字节HEX Binary转换成Base64编码，[转换工具](https://cryptii.com/pipes/binary-to-base64)
+- 编辑config.plist
+  - 替换```PlatformInfo```下```DataHub``` -> ```SystemSerialNumber```与```SMBIOS``` -> ```ChassisSerialNumber``` & ```SystemSerialNumber```为第一步生成的```SerialNumber```
+  - 替换```PlatformInfo```下```PlatformNVRAM``` -> ```MLB```与```SMBIOS``` -> ```BoardSerialNumber```为第一步生成的```BoardSerialNumber```
+  - 替换```PlatformInfo```下```DataHub``` -> ```SystemUUID```与```SMBIOS``` -> ```SystemUUID```为第二步生成的```SystemUUID```
+  - 替换```PlatformInfo```下```PlatformNVRAM``` -> ```ROM```为第三步生成的```ROM```
 
 ### 修改BIOS设置
 - OC Tweaker
@@ -98,23 +94,22 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ### 更换无线网卡
 - 主板自带Intel无线网卡可以直接更换为半高双天线NGFF接口无线网卡，例如DW1560、DW1820A、BCM94360NG等，BCM94360CS2也可以通过转接卡安装但是屏蔽罩上盖需要移除
-- 非DW1820A需删除config.plist中，Devices -> Properties -> PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)的全部注入信息
+- 非DW1820A需删除config.plist中，```DeviceProperties``` -> ```Add``` -> ```PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)```下的全部注入信息
 
 ### 修改CPU类型
-- 删除config.plist的CPU -> Type字段，重启后如果关于本机不能正常识别CPU类型，则需要注入正确的CPU Type
-- 修改config.plist的CPU -> Type字段，对应列表如下
+- 修改config.plist的```PlatformInfo``` -> ```SMBIOS``` -> ```ProcessorType```字段，对应列表如下
   ```
   酷睿i3
-  0x0309
+  2309 (0x0905, 待确认)
 
   酷睿i5
-  0x0605、0x0601、0x0407
+  1541 (0x0605)
 
   酷睿i7
-  0x0705、0x0701、0x0507
+  1797 (0x0705)
 
   酷睿i9
-  0x1005
+  4101 (0x1005)
   ```
 
 ### 定制显卡
