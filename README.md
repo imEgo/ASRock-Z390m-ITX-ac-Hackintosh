@@ -18,7 +18,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
-- macOS 10.15.6 19G73
+- macOS Catalina 10.15.6 19G2021
 - OpenCore 0.6.0
 
 
@@ -112,6 +112,9 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
   酷睿i9
   4101 (0x1005)
   ```
+
+### 定制CPUFriend
+- [参考文档](Resources/CPU/README.md)
 
 ### 定制显卡
 - AMD RX5700XT注入信息，[参考文档](Resources/GPU/README.md)
