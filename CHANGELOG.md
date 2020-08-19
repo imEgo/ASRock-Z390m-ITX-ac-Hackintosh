@@ -1,3 +1,9 @@
+## 2020/08/20
+
+### Changed (1 changes)
+- macOS升级至10.15.6 19G2021
+
+
 ## 2020/08/08
 
 ### Changed (2 changes)
