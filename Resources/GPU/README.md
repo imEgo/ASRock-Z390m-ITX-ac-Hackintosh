@@ -4,8 +4,8 @@
 
 1. Open AMD Control Center(Windows)
 2. Open ```Settings``` -> ```System```, Copy the ```BIOS Part Number```
-3. Replace the value of ```ATY,EFIVersionB``` in RadeonBoost.kext by step 2
-4. Copy RadeonBoost.kext to EFI/OC/Kexts
+3. Replace the value of ```ATY,EFIVersionB``` in ```RadeonBoost.kext``` by step 2
+4. Copy ```RadeonBoost.kext``` to ```EFI/OC/Kexts```
 5. Find ```RadeonBoost.kext``` under ```Kernel``` -> ```Add``` in config.plist and change ```Enabled``` to ```true```
 6. Rebuild kextcache and reboot
 
