@@ -1,3 +1,11 @@
+## 2020/10/04
+
+### Changed (3 changes)
+- 更新OpenCore至0.6.1
+- 更新Kexts至最新版本
+- macOS升级至10.15.7 19H2
+
+
 ## 2020/08/20
 
 ### Changed (1 changes)
@@ -6,7 +14,7 @@
 
 ## 2020/08/08
 
-### Changed (2 changes)
+### Changed (3 changes)
 - 替换CLOVER为OpenCore 0.6.0
 - 替换USBInjectAll.kext为USBPorts.kext
 - 更新Kexts至最新版本
