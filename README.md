@@ -19,7 +19,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
 - macOS Catalina 10.15.7 19H2
-- OpenCore 0.6.1
+- OpenCore 0.6.2
 
 
 ## 工作正常
@@ -54,10 +54,10 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 - 生成```SystemUUID```，[生成工具](https://www.uuidgenerator.net/version4)
 - 生成```ROM```，可以使用网卡MAC或复制SmUUID前6字节（e.g. ```EFD18768C3AE```），并将6字节HEX Binary转换成Base64编码，[转换工具](https://cryptii.com/pipes/binary-to-base64)
 - 编辑config.plist
-  - 替换```PlatformInfo```下```DataHub``` -> ```SystemSerialNumber```与```SMBIOS``` -> ```ChassisSerialNumber``` & ```SystemSerialNumber```为第一步生成的```SerialNumber```
-  - 替换```PlatformInfo```下```PlatformNVRAM``` -> ```MLB```与```SMBIOS``` -> ```BoardSerialNumber```为第一步生成的```BoardSerialNumber```
-  - 替换```PlatformInfo```下```DataHub``` -> ```SystemUUID```与```SMBIOS``` -> ```SystemUUID```为第二步生成的```SystemUUID```
-  - 替换```PlatformInfo```下```PlatformNVRAM``` -> ```ROM```为第三步生成的```ROM```
+  - 替换```PlatformInfo```下```Generic``` -> ```SystemSerialNumber```为第一步生成的```SerialNumber```
+  - 替换```PlatformInfo```下```Generic``` -> ```MLB```为第一步生成的```BoardSerialNumber```
+  - 替换```PlatformInfo```下```Generic``` -> ```SystemUUID```为第二步生成的```SystemUUID```
+  - 替换```PlatformInfo```下```Generic``` -> ```ROM```为第三步生成的```ROM```
 
 ### 修改BIOS设置
 - OC Tweaker
@@ -98,7 +98,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 - 非DW1820A需删除config.plist中，```DeviceProperties``` -> ```Add``` -> ```PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)```下的全部注入信息
 
 ### 修改CPU类型
-- 修改config.plist的```PlatformInfo``` -> ```SMBIOS``` -> ```ProcessorType```字段，对应列表如下
+- 如```关于本机```中无法正确显示CPU类型，则需要修改config.plist的```PlatformInfo``` -> ```Generic``` -> ```ProcessorType```字段，对应列表如下
   ```
   酷睿i3
   2309 (0x0905, 待确认)
