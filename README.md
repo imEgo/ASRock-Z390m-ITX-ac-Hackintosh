@@ -119,6 +119,12 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 ### 定制显卡
 - AMD RX5700XT注入信息，[参考文档](Resources/GPU/README.md)
 
+### 定制USB接口
+- 修改config.plist的```Kernel``` -> ```Add``` -> ```USBPorts.kext```的```Enabled```为```false```
+- 修改config.plist的```Kernel``` -> ```Quirks``` -> ```XhciPortLimit```为```true```
+- 重启系统，使用```Hackintool```，对照[参考文档](Resources/USB/README.md)的接口映射关系进行修改，将生成的```USBPorts.kext```替换至```EFI/OC/Kexts```
+- 将前2步的修改恢复修改前，重启系统
+
 ### OpenCore图形引导与启动声音
 - 下载[OcBinaryData](https://github.com/acidanthera/OcBinaryData/archive/master.zip)
 - 复制```OcBinaryData/Resources```的```Font``` & ```Image```及```Label```目录至```EFI/OC/Resources```
