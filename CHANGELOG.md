@@ -1,3 +1,10 @@
+## 2020/11/05
+
+### Changed (2 changes)
+- 更新OpenCore至0.6.3
+- 更新Kexts至最新版本
+
+
 ## 2020/10/11
 
 ### Changed (2 changes)
