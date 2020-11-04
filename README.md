@@ -19,7 +19,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
 - macOS Catalina 10.15.7 19H2
-- OpenCore 0.6.2
+- OpenCore 0.6.3
 
 
 ## 工作正常
