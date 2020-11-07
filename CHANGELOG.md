@@ -1,3 +1,9 @@
+## 2020/11/08
+
+### Changed (1 changes)
+- macOS升级至10.15.7 19H15
+
+
 ## 2020/11/05
 
 ### Changed (2 changes)
