@@ -33,7 +33,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 - 睡眠唤醒
 - AirDrop
 - iMessage/FaceTime
-- AppleTV DRM
+- AppleTV DRM（Big Sur暂时无法使用，Catalina上正常，对此功能有需求暂时不要升级至Big Sur）
 
 
 ## 工作异常
