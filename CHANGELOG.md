@@ -1,3 +1,10 @@
+## 2020/11/15
+
+### Changed (2 changes)
+- macOS升级至10.16 20B29
+- 更新IntelMausiEthernet至2.5.3d1
+
+
 ## 2020/11/08
 
 ### Changed (1 changes)
