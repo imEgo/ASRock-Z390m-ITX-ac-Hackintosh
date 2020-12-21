@@ -133,6 +133,17 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 - 修改config.plist的```UEFI``` -> ```Audio``` -> ```PlayChime```为```true```
 - 以上设置均参考[此文档](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
 
+### 禁用SIP
+- 修改```NVRAM``` -> ```Add``` -> ```7C436110-AB2A-4BBB-A880-FE41995C9F82``` -> ```csr-active-config```为如下值：
+  ```
+  00000000 - 启用SIP (0x0)
+  03000000 - 禁用kext签名 (0x1) 与 文件系统保护 (0x2)
+  FF030000 - 禁用全部 macOS High Sierra (0x3ff)
+  FF070000 - 禁用全部 macOS Mojave|Catalina (0x7ff)
+  FF0F0000 - 禁用全部 macOS Big Sur (0xfff)
+  ```
+[参考文档](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-issues.html#disabling-sip)
+
 
 ## 更新
 [更新日志](CHANGELOG.md)
