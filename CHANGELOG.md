@@ -1,3 +1,13 @@
+## 2020/12/22
+
+### Changed (2 changes)
+- 更新OpenCore至0.6.4
+- 更新Kexts至最新版本
+
+### Fixed (1 changes)
+- 修复SSDT部分问题
+
+
 ## 2020/11/15
 
 ### Changed (2 changes)
@@ -75,7 +85,7 @@
 
 ## 2020/06/01
 
-### Changed (1 changes)
+### Changed (3 changes)
 - macOS升级至10.15.5 19F96
 - 精简了CLOVER的配置文件
 - 更新了SSDT文件，添加_OSI("Darwin")，更容易迁移到OpenCore引导（笔记本更换了OpenCore没有什么特别明显的优势，双系统还是CLOVER更友好）
@@ -99,17 +109,17 @@
 ### Added (1 changes)
 - 使用kext注入XFX Radeon RX5700 XT THICC II Ultra定制PP_PhmSoftPowerPlayTable
 
-### Changed (3 changes)
+### Changed (2 changes)
 - 精简Clover配置
 - 升级kexts
 
 
 ## 2020/04/28
 
-### Changed (2 changes)
+### Changed (1 changes)
 - 完善FileVault支持（如果开启的话，修改Clover的隐藏启动项，使用Preboot启动）
 
-### Fixed (2 changes)
+### Fixed (3 changes)
 - 修复启动时间过长问题（修改核显ID屏蔽输出接口）
 - 修复AppleTV+的DRM视频播放问题
 - 修改CPU显示类型，修改前关于里显示为i7，改为i9
@@ -120,7 +130,7 @@
 ### Added (1 changes)
 - 添加CPUFriend及i9-9900es的配置
 
-### Changed (3 changes)
+### Changed (2 changes)
 - Clover升级至r5114
 - 隐藏Clover启动时的Preboot及Recovery选项
 
@@ -130,7 +140,7 @@
 ### Added (1 changes)
 - 添加XFX Radeon RX5700 XT THICC II Ultra 8G，伪装为Radeon Pro W5700X ~~（显卡驱动后的启动变长，原因未知待优化）~~
 
-### Changed (3 changes)
+### Changed (2 changes)
 - BIOS升级至4.30
 - macOS升级至10.15.4 19E287
 
