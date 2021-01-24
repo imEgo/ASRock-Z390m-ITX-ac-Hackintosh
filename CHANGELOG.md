@@ -1,3 +1,15 @@
+## 2021/01/24
+
+### Changed (3 changes)
+- macOS升级至11.1 20C69
+- 更新OpenCore至0.6.5
+- 更新Kexts至最新版本
+
+### Added (2 changes)
+- 增加MmioWhitelist
+- 增加HibernationFixup
+
+
 ## 2020/12/22
 
 ### Changed (2 changes)

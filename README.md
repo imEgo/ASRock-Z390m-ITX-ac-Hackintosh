@@ -18,7 +18,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
-- macOS Big Sur 10.16 20B29
+- macOS Big Sur 11.1 20C69
 - OpenCore 0.6.3
 
 
