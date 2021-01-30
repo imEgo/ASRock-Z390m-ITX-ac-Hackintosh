@@ -1,3 +1,13 @@
+## 2021/01/30
+
+### Changed (2 changes)
+- 禁用Mmio Whitelist
+- 开启核显RPS control
+
+### Added (1 changes)
+- 增加纯核显配置
+
+
 ## 2021/01/24
 
 ### Changed (3 changes)
