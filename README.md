@@ -1,6 +1,6 @@
 # ASRock Z390m-ITX/ac Hackintosh
 
-master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only](https://github.com/imEgo/ASRock-Z390m-ITX-ac-Hackintosh/tree/igpu-only)分支，无核显配置建议更换机型为MacPro7,1自行适配
+master分支为核显+免驱独立显卡配置，仅核显配置参见[定制核显说明](#仅核显配置（无独立显卡）)分支，无核显配置建议更换机型为MacPro7,1自行适配
 
 
 ## 硬件配置
@@ -19,7 +19,7 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
 - macOS Big Sur 11.1 20C69
-- OpenCore 0.6.3
+- OpenCore 0.6.5
 
 
 ## 工作正常
@@ -117,7 +117,13 @@ master分支为核显+免驱独立显卡配置，仅核显配置使用[igpu-only
 - [参考文档](Resources/CPU/README.md)
 
 ### 定制显卡
+
+#### 搭配AMD RX5700XT
 - AMD RX5700XT注入信息，[参考文档](Resources/GPU/README.md)
+
+#### 仅核显配置（无独立显卡）
+- 使用```EFI/OC/config-IGPU.plist```替换```EFI/OC/config.plist```
+
 
 ### 定制USB接口
 - 修改config.plist的```Kernel``` -> ```Add``` -> ```USBPorts.kext```的```Enabled```为```false```
