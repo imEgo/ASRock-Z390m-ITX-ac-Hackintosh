@@ -1,3 +1,11 @@
+## 2021/05/18
+
+### Changed (3 changes)
+- macOS升级至11.3.1 20E241
+- 更新OpenCore至0.6.9
+- 更新Kexts至最新版本
+
+
 ## 2021/02/04
 
 ### Changed (3 changes)
