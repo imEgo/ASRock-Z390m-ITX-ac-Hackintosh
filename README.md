@@ -18,8 +18,8 @@
 
 ## 软件版本
 - BIOS 4.30 (替换98版本06EC微码，非ES版CPU无需替换)
-- macOS Big Sur 11.4 20F71
-- OpenCore 0.7.0
+- macOS Big Sur 11.6 20G165
+- OpenCore 0.7.4
 
 
 ## 工作正常
