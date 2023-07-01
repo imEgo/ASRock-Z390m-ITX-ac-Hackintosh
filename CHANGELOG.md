@@ -1,8 +1,17 @@
 # 更新日志
 
+## 2022/07/01
+
+### Changed (4 changes)
+
+- macOS升级至13.3 22E252
+- 更新OpenCore至0.9.3
+- 更新Kexts至最新版本
+- 替换IntelMausiEthernet为IntelMausi
+
 ## 2022/12/31
 
-### Changed (3 changes)
+### Changed (4 changes)
 
 - macOS升级至12.4 21F79
 - 更新OpenCore至0.8.7
