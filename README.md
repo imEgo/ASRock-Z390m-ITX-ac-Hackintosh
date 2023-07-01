@@ -7,26 +7,26 @@
 - Intel Core i9-9900es(QQZ5) 2.60GHz
 - ASRock Z390m-ITX/ac
 - Intel UHD Graphics 630
-- XFX Radeon RX5700 XT THICC II Ultra 8G
-- Kingston Fury DDR4 2400MHz 8G * 2 (Overclock 3600MHz)
+- ASUS DUAL RX6600XT O8G
+- Crucial DDR4 3200MHz 16G * 2 (Overclock 3600MHz)
 - Samsung SM951 SSD 512GB NVMe PCIe M.2
 - WD Blue HDD 3TB SATA
-- Dell DW1820A WiFi + BT
+- BCM94360CS2 WiFi + BT （通过转接卡安装）
 - Intel I219V + I211AT
 - Realtek ALC892
 
 ## 软件版本
 
 - BIOS 4.30F (替换98版本06EC微码，非ES版CPU无需替换)
-- macOS Monterey 12.4 21F79
-- OpenCore 0.7.4
+- macOS Ventura 13.3 (22E252)
+- OpenCore 0.9.3
 
 ## 工作正常
 
 - Intel UHD Graphics 630
-- XFX Radeon RX5700 XT THICC II Ultra 8G
+- ASUS DUAL RX6600XT O8G
 - Intel I219V + Intel I211AT
-- Dell DW1820A WiFi + BT
+- BCM94360CS2 WiFi + BT
 - USB（IO面板保留TypeC接口 + 屏蔽2个USB3.0接口，前置面板保留2个USB3.0接口）
 - 声卡
 - NVRAM
@@ -98,13 +98,13 @@ BIOS设置时，对于有核显情况下，```Above 4G Decoding```需要进行�
 
 ### 更换无线网卡
 
-- 主板自带Intel无线网卡可以直接更换为半高双天线NGFF接口无线网卡，例如DW1560、DW1820A、BCM94360NG等，BCM94360CS2也可以通过转接卡安装但是屏蔽罩上盖需要移除
+- 主板自带Intel无线网卡可以直接更换为半高双天线NGFF接口无线网卡，例如DW1560、DW1820A、BCM94360NG等，BCM94360CS2也可以通过转接卡(正向)安装但是屏蔽罩上盖需要移除
 
 ### 修改CPU类型
 
 - 如```关于本机```中无法正确显示CPU类型，则需要修改config.plist的```PlatformInfo``` -> ```Generic``` -> ```ProcessorType```字段，对应列表如下
 
-  ```
+  ```text
   酷睿i3
   2309 (0x0905, 待确认)
 
@@ -152,7 +152,7 @@ BIOS设置时，对于有核显情况下，```Above 4G Decoding```需要进行�
 
 - 修改```NVRAM``` -> ```Add``` -> ```7C436110-AB2A-4BBB-A880-FE41995C9F82``` -> ```csr-active-config```为如下值：
 
-  ```
+  ```text
   00000000 - 启用SIP (0x0)
   03000000 - 禁用kext签名 (0x1) 与 文件系统保护 (0x2)
   FF030000 - 禁用全部 macOS High Sierra (0x3ff)
@@ -161,6 +161,16 @@ BIOS设置时，对于有核显情况下，```Above 4G Decoding```需要进行�
   ```
 
 [参考文档](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-issues.html#disabling-sip)
+
+### Kext引用
+
+- [Lilu](https://github.com/acidanthera/AppleALC)
+- [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
+- [WhateverGreen](https://github.com/acidanthera/WhateverGreen)
+- [AppleALC](https://github.com/acidanthera/AppleALC)
+- [IntelMausi](https://github.com/acidanthera/IntelMausi)
+- [AppleIGB](https://github.com/Shaneee/AppleIGB)
+- [HibernationFixup](https://github.com/acidanthera/HibernationFixup)
 
 ## 更新
 
